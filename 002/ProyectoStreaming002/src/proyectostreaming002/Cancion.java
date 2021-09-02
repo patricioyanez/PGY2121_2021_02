@@ -26,7 +26,6 @@ public class Cancion {
     }
     
     // getter and setter
-
     public String getTitulo() {
         return titulo;
     }
@@ -67,18 +66,32 @@ public class Cancion {
         this.estaDescargada = estaDescargada;
     }
     
+    
     // metodos customer
     
-    public String esExtensa()
+    public String tipoCancion()
     {
         if(this.segundos > (5*60))
         {
-            return "La canción es extensa";
+            return "La canción es larga";
         }
         else
         {
-            return "La canción no es extensa";
+            return "La canción es normal";
         }
+    }
+
+    public void imprimir()
+    {
+        System.out.println("********** D A T O S  D E  L A  C A N C I Ó N ***************");
+        System.out.println("Titulo      : " + this.titulo);
+        System.out.println("Artista     : " + this.artista);
+        
+        int minutos =  this.segundos / 60; // se calcula los min de la canción
+        int segundo = this.segundos - (minutos*60); // se obtiene el resto de los segundos
+        
+        System.out.println("Duracion    : " + minutos + ":" + segundo);
+        
     }
     
 }
