@@ -78,6 +78,7 @@ public class Sentencias002 {
         int contador = 0;
         while(contador < 10)
         {
+            // contador = contador + 1
             System.out.println("numero " + contador++);
         }
     }
