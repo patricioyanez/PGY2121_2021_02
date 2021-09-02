@@ -94,4 +94,9 @@ public class Cancion {
         
     }
     
+    public int adelantar(int tiempoActual)
+    {
+        return tiempoActual + 15;
+    }
+    
 }

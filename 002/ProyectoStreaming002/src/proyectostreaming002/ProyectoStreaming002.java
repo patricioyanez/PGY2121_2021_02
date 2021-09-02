@@ -18,7 +18,14 @@ public class ProyectoStreaming002 {
         cancion01.imprimir();
         
         
+        Cancion cancion02;
+        cancion02 = new Cancion("Bailando solo", "Los Bunkers", 250, true, true);
+        cancion02.imprimir();
         
+        String aux = cancion02.tipoCancion();
+        System.out.println(aux);
+        
+        System.out.println(cancion02.tipoCancion());
         
     }
     
