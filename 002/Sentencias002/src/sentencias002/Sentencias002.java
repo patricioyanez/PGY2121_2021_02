@@ -1,4 +1,5 @@
 package sentencias002;
+import java.util.Scanner; // permite leer el teclado
 
 public class Sentencias002 {
 
@@ -76,11 +77,70 @@ public class Sentencias002 {
         
         System.out.println("el numero " + texto);
         int contador = 0;
-        while(contador < 10)
+        while(contador <= 10)
         {
             // contador = contador + 1
             System.out.println("numero " + contador++);
         }
+        
+        
+        while(contador != 0)
+        {
+            System.out.println("cuenta atrás " + contador--);
+        }
+        
+        for(int i = 0; i < 10; i++)
+        {
+            System.out.println("for: "+ i);
+        }
+        
+        
+        
+        ///*** menu ******////
+        String opcion = "";
+        //Objeto para leer el teclado
+        Scanner teclado = new Scanner(System.in);
+        
+        while(!opcion.equals("5"))
+        {
+            System.out.println("***** Menú *******");
+            System.out.println("1.- Ingreso");
+            System.out.println("2.- Modificación");
+            System.out.println("3.- Eliminar");
+            System.out.println("4.- Listar");
+            System.out.println("5.- Salir");
+            System.out.print("Ingrese su opción: ");
+            opcion = teclado.next();
+        }
+        
+        
+        
+        //**** ejercicio *////
+        
+        int adultos     = 0;
+        int ninos       = 0;
+        int invitados   = 0;
+        int edad        = 0;
+        
+        System.out.print("Cuantos invitados son?: ");
+        // utilizar la clase / objeto scanner
+        invitados = teclado.nextInt();
+        
+        for(int indice = 1; indice <= invitados; indice++)
+        {
+            System.out.print("La edad del invitado es: ");
+            edad = teclado.nextInt();
+            
+            if(edad <= 12)
+                ninos++;
+            else
+                adultos++;
+        }
+        
+        System.out.println("Total de niños  : " + ninos);
+        System.out.println("Total de adultos: " + adultos);
+        
+        
     }
     
 }
