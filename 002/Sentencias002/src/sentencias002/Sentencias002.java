@@ -53,7 +53,7 @@ public class Sentencias002 {
         
         
         // switch
-        int numero = 100;
+        int numero = 1000000;
         String texto = "";
         
         switch(numero)
@@ -89,11 +89,15 @@ public class Sentencias002 {
             System.out.println("cuenta atrás " + contador--);
         }
         
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i <= 10; i++)
         {
             System.out.println("for: "+ i);
         }
-        
+        int index = 0;
+        for( ; index++ <10 ;)
+        {
+            System.out.println("index: " + index);
+        }
         
         
         ///*** menu ******////
@@ -110,7 +114,34 @@ public class Sentencias002 {
             System.out.println("4.- Listar");
             System.out.println("5.- Salir");
             System.out.print("Ingrese su opción: ");
+            // capturar y asignar el texto que el usuario escribio
             opcion = teclado.next();
+            // mostrar un mensaje con la opcion presionada
+            if (opcion.equals("1"))
+            {
+                System.out.println("Accedio a la opción: Ingreso");
+            }
+            else if (opcion.equals("2"))
+            {
+                System.out.println("Accedio a la opción: Modificación");
+            }
+            else if (opcion.equals("3"))
+            {
+                System.out.println("Accedio a la opción: Eliminar");
+            }
+            else if (opcion.equals("4"))
+            {
+                System.out.println("Accedio a la opción: Listar");
+            }
+            else if (opcion.equals("5"))
+            {
+                System.out.println("... cerrando sistema");
+            }
+            else
+            {
+                System.out.println("Opción no válida");
+            }
+            
         }
         
         
