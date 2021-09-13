@@ -7,14 +7,20 @@ public class ClaseString {
         
         String texto2 = "gsd4g6s7df6g5sdf";
         
-        String texto3 = new String("12345");
+        String texto3 = new String(" 12345asdfasdf");
         
         System.out.println(texto + "\n" + texto2 + "\n" + texto3);
         
+        // metodos de la clase String
         System.out.println("Length: " + texto3.length());
+        
+        // igualdad
+        // case sensitive
         System.out.println("aa".equals("aa")); //TRue
         System.out.println("aa".equals("AA")); //false
-        System.out.println("aa".equalsIgnoreCase("AA")); //true
+        System.out.println("AA".equalsIgnoreCase("aa")); //true
+        
+        
         System.out.print("start with ");
         System.out.println(texto.startsWith("423")); // true
         System.out.println(texto.startsWith("atr")); // false
