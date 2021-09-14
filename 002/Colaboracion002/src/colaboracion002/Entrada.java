@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package colaboracion002;
+import java.util.Date;
 
-/**
- *
- * @author patri
- */
 public class Entrada {
+
+    int numero;
+    Date fecha;
+    int valor;
+    int asiento;
+    String evento;
+    Persona persona;
+    
+    // constructores, g & s, y metodo toString()
     
 }
