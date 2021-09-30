@@ -41,7 +41,33 @@ public class Coleccion002 {
         }
         
         
+        System.out.println("*************  Métodos *******************");
+        System.out.println("");
+        // permite saber cuanto elementos hay en la colección
+        System.out.println("Nros de elementos: " + apellidos.size());
         
+        // limpiar o vacia una colección
+        apellidos.clear();
+        System.out.println("Nros de elementos clear: " + apellidos.size());
+        
+        // devuelve v/f si encuentra el elemento especificado dentro de la colección
+        boolean existe = false;
+        existe = nombres.contains("Juan");
+        System.out.println("Existe el nombre?: " + (existe?"si":"no"));
+        System.out.println("Existe el nombre?: " + nombres.contains("Fabiola"));
+        
+        // devuelve el elemento del indice especificado
+        System.out.println("El nombre del indice es: " + nombres.get(2));
+        System.out.println("El nombre del indice es: " + nombres.get(2).toUpperCase());
+        
+        // permite saber si el objeto existe en la colección
+        // -1 no existe. 0 o nro +
+        System.out.println("indice del nombre: " + nombres.indexOf("Amy"));        
+        System.out.println("indice del nombre: " + nombres.indexOf("Fabian"));
+        
+        // eliminar un elemento dentro de la colección
+        System.out.println("Resultado: " + nombres.remove(1));
+        System.out.println("Resultado: " + nombres.remove("Amy"));
         
         
     }
