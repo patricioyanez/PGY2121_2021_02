@@ -5,6 +5,8 @@
  */
 package scootin002;
 
+import java.util.Scanner;
+
 /**
  *
  * @author patri
@@ -36,6 +38,22 @@ public class Scootin002 {
         scootin.listar();
         
         // buscar si un rut existe y eliminarlo
+        Scanner leerTeclado = new Scanner(System.in);
+        System.out.print("Ingrese rut a eliminar: ");
+        String rut = leerTeclado.next();
+        if(scootin.buscar(rut))
+        {
+            scootin.eliminar(rut);
+            System.out.println("El rut " + rut + " se encuentra disponible y fue eliminado");            
+        }
+        else
+        {
+            System.out.println("El rut no existe!!!");
+        }
+        // lista los empleados
+        System.out.println("**********************************************************");
+        scootin.listar();
+        
     }
     
 }
