@@ -13,6 +13,7 @@ public class Cancion {
     private String nombre;
     private int segundos;
     private String album;
+    private boolean esFavorita;
     private Artista artista;
 
     public Cancion() {
@@ -22,10 +23,11 @@ public class Cancion {
         this.artista = new Artista();
     }
     
-    public Cancion(String nombre, int segundos, String album, Artista artista) {
+    public Cancion(String nombre, int segundos, String album, Boolean esFavorita, Artista artista) {
         this.nombre = nombre;
         this.segundos = segundos;
         this.album = album;
+        this.esFavorita = esFavorita;
         this.artista = artista;
     }
 
@@ -61,14 +63,23 @@ public class Cancion {
         this.album = album;
     }
 
+    public boolean isEsFavorita() {
+        return esFavorita;
+    }
+
+    public void setEsFavorita(boolean esFavorita) {
+        this.esFavorita = esFavorita;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Cancion: " + "nombre=" + nombre + 
                 ", segundos=" + segundos + 
                 ", album=" + album + 
+                ", es favorita= " + (esFavorita?"Si":"No") +
                 ", artista=" + artista;
     }
-    
-    
     
 }
