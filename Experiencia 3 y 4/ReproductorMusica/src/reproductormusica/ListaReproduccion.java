@@ -22,7 +22,12 @@ public class ListaReproduccion {
     {
         for(Cancion cancion: canciones)
         {
-            System.out.println(cancion);
+            //System.out.println(cancion);
+            System.out.println(cancion.getArtista().getNombre() + ": " +
+                                cancion.getNombre() + " : " +
+                                cancion.getSegundos() + " : " +
+                                cancion.getArtista().getOrigen()
+                                );
         }
     }
     public boolean buscar(String nombre)

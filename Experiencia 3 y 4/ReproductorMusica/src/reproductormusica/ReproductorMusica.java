@@ -44,6 +44,7 @@ public class ReproductorMusica {
         String opcion = "";
         while(!opcion.equals("0"))
         {
+            System.out.println("Lista de reproducción");
             System.out.println("1.- lista de reproducción 1");
             System.out.println("2.- lista de reproducción 2");
             System.out.println("0.- Salir del menú");
@@ -60,9 +61,10 @@ public class ReproductorMusica {
             }
 
         }
-        
-        
-        
+        // Ejercicios: crear clase Super clase Animal con 3 atributos
+        // y 2 sub clases que contengan 2 atributos adicionales.
+        // imprimir todos los valores
+       
         
     }
     
