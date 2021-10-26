@@ -70,16 +70,25 @@ public class Cancion {
     public void setEsFavorita(boolean esFavorita) {
         this.esFavorita = esFavorita;
     }
-    
-    
 
     @Override
     public String toString() {
-        return "Cancion: " + "nombre=" + nombre + 
-                ", segundos=" + segundos + 
-                ", album=" + album + 
-                ", es favorita= " + (esFavorita?"Si":"No") +
-                ", artista=" + artista;
+        return "Cancion{" + "nombre=" + nombre + ", segundos=" + segundos + ", album=" + album + ", esFavorita=" + esFavorita + ", artista=" + artista + '}';
+    }
+    
+    public void imprimir()
+    {
+        System.out.println(this);
+    }
+    
+    public void imprimir(String titulo)
+    {
+        System.out.println(titulo +"\n" + this);
+    }
+    
+    public String imprimir(Boolean devolverDatos)
+    {
+        return this.toString();
     }
     
 }

@@ -29,6 +29,9 @@ public class ReproductorMusica {
         Cancion cancion5 = new Cancion("Profugos", 331, "El Ultimo concierto", Boolean.FALSE, artista2);
         Cancion cancion6 = new Cancion("Signos", 610, "El Ultimo concierto", Boolean.FALSE, artista2);
         
+        cancion1.imprimir();
+        cancion1.imprimir("LA gran canción:");
+        
         ListaReproduccion lr1 = new ListaReproduccion();
         ListaReproduccion lr2 = new ListaReproduccion();
         
@@ -59,13 +62,12 @@ public class ReproductorMusica {
             {
                 lr2.listar();
             }
-
         }
         // Ejercicios: crear clase Super clase Animal con 3 atributos
         // y 2 sub clases que contengan 2 atributos adicionales.
         // imprimir todos los valores
        
         
-    }
+   }
     
 }
