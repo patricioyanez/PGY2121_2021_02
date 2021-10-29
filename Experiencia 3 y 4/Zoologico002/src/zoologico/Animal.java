@@ -26,16 +26,7 @@ public class Animal {
         this.esVenenoso = esVenenoso;
     }
 
-    @Override
-    public String toString() {
-        return "Animal{" + "ojos=" + ojos + ", tieneCola=" + tieneCola + ", esVenenoso=" + esVenenoso + '}';
-    }
-    
-    public void comer()
-    {
-        System.out.println("El animal come");
-    }
-
+ 
     public int getOjos() {
         return ojos;
     }
@@ -59,4 +50,16 @@ public class Animal {
     public void setEsVenenoso(boolean esVenenoso) {
         this.esVenenoso = esVenenoso;
     }
+    
+    @Override
+    public String toString() {
+        return "Animal{" + "ojos=" + ojos + ", tieneCola=" + tieneCola + ", esVenenoso=" + esVenenoso + '}';
+    }
+    
+    public void comer()
+    {
+        System.out.println("El animal come");
+    }
+
+    
 }

@@ -37,6 +37,32 @@ public class Mamifero extends Animal {
     public void setDiasGestacion(int diasGestacion) {
         this.diasGestacion = diasGestacion;
     }
+
+    @Override
+    public void comer() {
+        System.out.println("El mamifero come");
+    }
     
+    // sobre carga de un metodo
+    public void beber()
+    {
+        System.out.println("El mamifero bebe agua");
+    }
+    public void beber(String liquido)
+    {
+        System.out.println("El mamifero bebe " + liquido);
+    }
+    public void beber(String liquido, int cc) // 1 litro es 1000cc
+    {
+        System.out.println("El mamifero bebe " + cc + "cc de " + liquido);
+    }    
     
+    public void llamar()
+    {
+        System.out.println("*****************");
+        this.beber();        
+        this.comer();
+        super.comer();
+        
+    }
 }
