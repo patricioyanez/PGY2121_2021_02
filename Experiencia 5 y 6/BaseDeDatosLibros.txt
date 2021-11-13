@@ -1,0 +1,8 @@
+CREATE TABLE LIBRO( 
+idlibro		INT 			PRIMARY KEY AUTO_INCREMENT, 
+titulo 		VARCHAR(100) 	NOT NULL, 
+autor		VARCHAR(100) 	NOT NULL, 
+publicacion VARCHAR(12) 	NOT NULL, 
+precio		INT 			NOT NULL, 
+disponible	INT 			NOT NULL 
+);
