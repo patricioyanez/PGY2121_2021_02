@@ -79,5 +79,20 @@ public class Libro {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+    
+    public void limpiar()
+    {        
+        this.idLibro = 0;//=0 insert/guardar. id>0 modificar / eliminar
+        this.titulo = "";
+        this.autor = "";
+        this.publicacion = null;
+        this.precio = 0;
+        this.disponible = false;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "idLibro=" + idLibro + ", titulo=" + titulo + ", autor=" + autor + ", publicacion=" + publicacion + ", precio=" + precio + ", disponible=" + disponible + '}';
+    }
 
 }
