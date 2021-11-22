@@ -166,4 +166,6 @@ public class Registro {
         }
         return lista;
     }
+
+    
 }
