@@ -133,6 +133,11 @@ public class frmLibro extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        grilla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                grillaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(grilla);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -329,8 +334,39 @@ public class frmLibro extends javax.swing.JFrame {
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
         // TODO add your handling code here:
-
+        DefaultTableModel modelo = (DefaultTableModel) grilla.getModel();
+        modelo.setRowCount(0);
+        
+        Registro registro = new Registro();
+        
+        List<Libro> lista = registro.buscarTodos();
+        
+        for(Libro libro: lista)
+        {
+            modelo.addRow(new Object[]{ 
+                libro.getIdLibro(),
+                libro.getTitulo(),
+                libro.getAutor(),
+                libro.getPublicacion(),
+                libro.getPrecio(),
+                libro.isDisponible()
+            });
+        }
+        
     }//GEN-LAST:event_btnListarActionPerformed
+
+    private void grillaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grillaMouseClicked
+        // TODO add your handling code here:
+        int row = grilla.rowAtPoint(evt.getPoint());
+        // convierte el object a un string y despues a un int
+        int id = Integer.parseInt(grilla.getValueAt(row, 1).toString());
+        libro.setIdLibro(id);
+        
+        txtTitulo.setText(grilla.getValueAt(row, 1).toString());
+        
+        // TAREA: AGREGAR LOS DEMAS VALORES AL FORMULARIO (SUBSTRING)
+        
+    }//GEN-LAST:event_grillaMouseClicked
 
     /**
      * @param args the command line arguments
