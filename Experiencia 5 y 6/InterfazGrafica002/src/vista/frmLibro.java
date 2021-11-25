@@ -287,7 +287,7 @@ public class frmLibro extends javax.swing.JFrame {
         }
         else
         {
-            libro.setIdLibro(0);
+            libro.setIdLibro(0); //insert/guardar
             libro.setTitulo(txtTitulo.getText().trim().toUpperCase());
             libro.setAutor(txtAutor.getText().trim().toUpperCase());
             
@@ -359,12 +359,21 @@ public class frmLibro extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = grilla.rowAtPoint(evt.getPoint());
         // convierte el object a un string y despues a un int
-        int id = Integer.parseInt(grilla.getValueAt(row, 1).toString());
+        int id = Integer.parseInt(grilla.getValueAt(row, 0).toString());
         libro.setIdLibro(id);
         
         txtTitulo.setText(grilla.getValueAt(row, 1).toString());
+        txtAutor.setText(grilla.getValueAt(row, 2).toString());
         
-        // TAREA: AGREGAR LOS DEMAS VALORES AL FORMULARIO (SUBSTRING)
+        //System.out.println("" + grilla.getValueAt(row, 3).toString());
+        String fecha = grilla.getValueAt(row, 3).toString();
+        txtDia.setText(fecha.substring(8));
+        txtMes.setText(fecha.substring(5,7));
+        txtAnio.setText(fecha.substring(0,4));
+        
+        txtPrecio.setText(grilla.getValueAt(row, 4).toString());
+        chkDisponible.setSelected(grilla.getValueAt(row, 5).toString().equals("true"));
+        
         
     }//GEN-LAST:event_grillaMouseClicked
 
